@@ -1,4 +1,3 @@
-// Auto-generated from KMZ route files
 export const NETWORKS = {
   "Mumbai": {
     "label": "APM Alignments Mumbai",
@@ -1911,202 +1910,297 @@ export const NETWORKS = {
     ],
     "stations": [
       {
-        "name": "Charkop Marve",
+        "name": "M-1",
         "lat": 19.195918,
         "lng": 72.833611
       },
       {
-        "name": "4.3 kM",
+        "name": "M-2",
+        "lat": 19.196609,
+        "lng": 72.814648
+      },
+      {
+        "name": "M-3",
         "lat": 19.199242,
         "lng": 72.797908
       },
       {
-        "name": "Seawoods",
+        "name": "M-4",
         "lat": 19.020974,
         "lng": 73.017719
       },
       {
-        "name": "NMIA 9 km",
+        "name": "M-5",
+        "lat": 19.000493,
+        "lng": 73.033314
+      },
+      {
+        "name": "M-6",
         "lat": 18.991493,
         "lng": 73.063732
       },
       {
-        "name": "Vashi",
+        "name": "M-7",
         "lat": 19.063693,
         "lng": 72.997714
       },
       {
-        "name": "Ikea 5.8km",
+        "name": "M-8",
+        "lat": 19.071746,
+        "lng": 73.000311
+      },
+      {
+        "name": "M-9",
         "lat": 19.081446,
         "lng": 73.019231
       },
       {
-        "name": "Link 0.1 km",
+        "name": "M-10",
         "lat": 19.065884,
         "lng": 72.996577
       },
       {
-        "name": "Link 0.1 km",
+        "name": "M-11",
         "lat": 19.06625,
         "lng": 72.997474
       },
       {
-        "name": "JVLR",
+        "name": "M-12",
         "lat": 19.122184,
         "lng": 72.898583
       },
       {
-        "name": "Saki Naka 3.8 km",
+        "name": "M-13",
+        "lat": 19.114583,
+        "lng": 72.889015
+      },
+      {
+        "name": "M-14",
         "lat": 19.100239,
         "lng": 72.883931
       },
       {
-        "name": "Chandivali Link 2 km",
+        "name": "M-15",
         "lat": 19.121091,
         "lng": 72.899009
       },
       {
-        "name": "Chandivali Link 2 km",
+        "name": "M-16",
+        "lat": 19.114521,
+        "lng": 72.898391
+      },
+      {
+        "name": "M-17",
         "lat": 19.112257,
         "lng": 72.888591
       },
       {
-        "name": "Path Measure 1.4 km",
+        "name": "M-18",
         "lat": 19.11441,
         "lng": 72.898414
       },
       {
-        "name": "Path Measure 1.4 km",
+        "name": "M-19",
+        "lat": 19.111724,
+        "lng": 72.90114
+      },
+      {
+        "name": "M-20",
         "lat": 19.103608,
         "lng": 72.900006
       },
       {
-        "name": "Path Measure 2.2 km",
+        "name": "M-21",
         "lat": 19.113546,
         "lng": 72.900212
       },
       {
-        "name": "Path Measure 2.2 km",
+        "name": "M-22",
+        "lat": 19.1149,
+        "lng": 72.905761
+      },
+      {
+        "name": "M-23",
         "lat": 19.123923,
         "lng": 72.912662
       },
       {
-        "name": "Path Measure 2.5 km",
+        "name": "M-24",
         "lat": 19.11995,
         "lng": 72.912576
       },
       {
-        "name": "Path Measure 2.5 km",
+        "name": "M-25",
+        "lat": 19.114929,
+        "lng": 72.917309
+      },
+      {
+        "name": "M-26",
         "lat": 19.102514,
         "lng": 72.919941
       },
       {
-        "name": "T2",
+        "name": "M-27",
         "lat": 19.109682,
         "lng": 72.874982
       },
       {
-        "name": "1 2 Km",
+        "name": "M-28",
+        "lat": 19.101371,
+        "lng": 72.876228
+      },
+      {
+        "name": "M-29",
         "lat": 19.103302,
         "lng": 72.874495
       },
       {
-        "name": "Cargo Terminal Extension 1 km",
+        "name": "M-30",
         "lat": 19.100787,
         "lng": 72.873001
       },
       {
-        "name": "Cargo Terminal Extension 1 km",
+        "name": "M-31",
+        "lat": 19.099423,
+        "lng": 72.871216
+      },
+      {
+        "name": "M-32",
         "lat": 19.096818,
         "lng": 72.865612
       },
       {
-        "name": "T",
+        "name": "M-33",
         "lat": 19.093517,
         "lng": 72.856552
       },
       {
-        "name": "1 Loop 0.8 Km",
+        "name": "M-34",
+        "lat": 19.095044,
+        "lng": 72.855014
+      },
+      {
+        "name": "M-35",
         "lat": 19.09357,
         "lng": 72.856586
       },
       {
-        "name": "Taj Santacruz Link 0.15 km",
+        "name": "M-36",
         "lat": 19.093668,
         "lng": 72.855008
       },
       {
-        "name": "Taj Santacruz Link 0.15 km",
+        "name": "M-37",
+        "lat": 19.09298,
+        "lng": 72.854975
+      },
+      {
+        "name": "M-38",
         "lat": 19.092576,
         "lng": 72.855043
       },
       {
-        "name": "T1",
+        "name": "M-39",
         "lat": 19.0952,
         "lng": 72.855278
       },
       {
-        "name": "Cargo Terminal 2.4 Km",
+        "name": "M-40",
+        "lat": 19.101845,
+        "lng": 72.856034
+      },
+      {
+        "name": "M-41",
         "lat": 19.096844,
         "lng": 72.865538
       },
       {
-        "name": "JW  Link 0.36 km",
+        "name": "M-42",
         "lat": 19.103306,
         "lng": 72.874574
       },
       {
-        "name": "JW  Link 0.36 km",
+        "name": "M-43",
+        "lat": 19.103092,
+        "lng": 72.87681
+      },
+      {
+        "name": "M-44",
         "lat": 19.102599,
         "lng": 72.87766
       },
       {
-        "name": "Link",
+        "name": "M-45",
         "lat": 19.103247,
         "lng": 72.872859
       },
       {
-        "name": "1.2 km",
+        "name": "M-46",
+        "lat": 19.106072,
+        "lng": 72.868596
+      },
+      {
+        "name": "M-47",
         "lat": 19.111837,
         "lng": 72.867729
       },
       {
-        "name": "Lalit Link 0.1 km",
+        "name": "M-48",
         "lat": 19.106204,
         "lng": 72.874862
       },
       {
-        "name": "Lalit Link 0.1 km",
+        "name": "M-49",
+        "lat": 19.106001,
+        "lng": 72.875283
+      },
+      {
+        "name": "M-50",
         "lat": 19.105803,
         "lng": 72.875631
       },
       {
-        "name": "Waterstone Link 0.27km",
+        "name": "M-51",
         "lat": 19.107572,
         "lng": 72.875418
       },
       {
-        "name": "Waterstone Link 0.27km",
+        "name": "M-52",
+        "lat": 19.107069,
+        "lng": 72.87703
+      },
+      {
+        "name": "M-53",
         "lat": 19.106614,
         "lng": 72.877419
       },
       {
-        "name": "Leela Link 0.3 km",
+        "name": "M-54",
         "lat": 19.10824,
         "lng": 72.875664
       },
       {
-        "name": "Leela Link 0.3 km",
+        "name": "M-55",
+        "lat": 19.108636,
+        "lng": 72.874284
+      },
+      {
+        "name": "M-56",
         "lat": 19.109103,
         "lng": 72.873428
       },
       {
-        "name": "T2",
+        "name": "M-57",
         "lat": 19.103053,
         "lng": 72.87688
       },
       {
-        "name": "EEH 7.4 km",
+        "name": "M-58",
+        "lat": 19.0873,
+        "lng": 72.884102
+      },
+      {
+        "name": "M-59",
         "lat": 19.084401,
         "lng": 72.92087
       }
@@ -3650,572 +3744,632 @@ export const NETWORKS = {
     ],
     "stations": [
       {
-        "name": "Path Measure 5.5 km",
+        "name": "D-1",
         "lat": 28.573109,
         "lng": 77.137834
       },
       {
-        "name": "Path Measure 5.5 km",
+        "name": "D-2",
+        "lat": 28.548793,
+        "lng": 77.126975
+      },
+      {
+        "name": "D-3",
         "lat": 28.534169,
         "lng": 77.108355
       },
       {
-        "name": "Path Measure 13.9 km",
+        "name": "D-4",
         "lat": 28.593336,
         "lng": 77.163309
       },
       {
-        "name": "Path Measure 13.9 km",
+        "name": "D-5",
+        "lat": 28.551783,
+        "lng": 77.130939
+      },
+      {
+        "name": "D-6",
         "lat": 28.498149,
         "lng": 77.089777
       },
       {
-        "name": "Path Measure 21.2 km",
+        "name": "D-7",
+        "lat": 28.448092,
+        "lng": 77.023033
+      },
+      {
+        "name": "D-8",
         "lat": 28.369779,
         "lng": 76.94364
       },
       {
-        "name": "Path Measure 14 km",
+        "name": "D-9",
         "lat": 28.3698,
         "lng": 76.933948
       },
       {
-        "name": "Path Measure 14 km",
+        "name": "D-10",
+        "lat": 28.380057,
+        "lng": 76.878937
+      },
+      {
+        "name": "D-11",
         "lat": 28.370142,
         "lng": 76.933926
       },
       {
-        "name": "Path Measure 1.8 km",
+        "name": "D-12",
         "lat": 28.364589,
         "lng": 76.933958
       },
       {
-        "name": "Path Measure 1.8 km",
+        "name": "D-13",
+        "lat": 28.3606,
+        "lng": 76.925449
+      },
+      {
+        "name": "D-14",
         "lat": 28.36477,
         "lng": 76.925512
       },
       {
-        "name": "Path Measure 1.4 km",
+        "name": "D-15",
         "lat": 28.364748,
         "lng": 76.925416
       },
       {
-        "name": "Path Measure 1.4 km",
+        "name": "D-16",
+        "lat": 28.362048,
+        "lng": 76.917452
+      },
+      {
+        "name": "D-17",
         "lat": 28.364881,
         "lng": 76.917509
       },
       {
-        "name": "Path Measure 1.9 km",
+        "name": "D-18",
         "lat": 28.364778,
         "lng": 76.917402
       },
       {
-        "name": "Path Measure 1.9 km",
+        "name": "D-19",
+        "lat": 28.361495,
+        "lng": 76.906038
+      },
+      {
+        "name": "D-20",
         "lat": 28.364969,
         "lng": 76.906106
       },
       {
-        "name": "Path Measure 0.4 km",
+        "name": "D-21",
         "lat": 28.364927,
         "lng": 76.913256
       },
       {
-        "name": "Path Measure 0.4 km",
+        "name": "D-22",
         "lat": 28.361634,
         "lng": 76.913241
       },
       {
-        "name": "Path Measure 2.6 km",
+        "name": "D-23",
         "lat": 28.365173,
         "lng": 76.909462
       },
       {
-        "name": "Path Measure 2.6 km",
+        "name": "D-24",
+        "lat": 28.372275,
+        "lng": 76.919365
+      },
+      {
+        "name": "D-25",
         "lat": 28.36507,
         "lng": 76.919375
       },
       {
-        "name": "Path Measure 0.6 km",
+        "name": "D-26",
         "lat": 28.365148,
         "lng": 76.913342
       },
       {
-        "name": "Path Measure 0.6 km",
+        "name": "D-27",
         "lat": 28.365102,
         "lng": 76.919265
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-28",
         "lat": 28.372004,
         "lng": 76.921943
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-29",
         "lat": 28.365018,
         "lng": 76.921801
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-30",
         "lat": 28.36493,
         "lng": 76.931936
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-31",
         "lat": 28.371958,
         "lng": 76.932087
       },
       {
-        "name": "Path Measure 0.2 km",
+        "name": "D-32",
         "lat": 28.36823,
         "lng": 76.932091
       },
       {
-        "name": "Path Measure 0.2 km",
+        "name": "D-33",
         "lat": 28.368267,
         "lng": 76.933818
       },
       {
-        "name": "Path Measure 0.2 km",
+        "name": "D-34",
         "lat": 28.36839,
         "lng": 76.933787
       },
       {
-        "name": "Path Measure 0.2 km",
+        "name": "D-35",
         "lat": 28.368359,
         "lng": 76.932103
       },
       {
-        "name": "Path Measure 1 km",
+        "name": "D-36",
         "lat": 28.367119,
         "lng": 76.931777
       },
       {
-        "name": "Path Measure 1 km",
+        "name": "D-37",
         "lat": 28.367255,
         "lng": 76.922102
       },
       {
-        "name": "Path Measure 1 km",
+        "name": "D-38",
         "lat": 28.370333,
         "lng": 76.922031
       },
       {
-        "name": "Path Measure 1 km",
+        "name": "D-39",
         "lat": 28.370133,
         "lng": 76.931871
       },
       {
-        "name": "Path Measure 0.4 km",
+        "name": "D-40",
         "lat": 28.370175,
         "lng": 76.923497
       },
       {
-        "name": "Path Measure 0.4 km",
+        "name": "D-41",
         "lat": 28.367353,
         "lng": 76.923362
       },
       {
-        "name": "Path Measure 0.4 km",
+        "name": "D-42",
         "lat": 28.367247,
         "lng": 76.929838
       },
       {
-        "name": "Path Measure 0.4 km",
+        "name": "D-43",
         "lat": 28.369999,
         "lng": 76.929935
       },
       {
-        "name": "Path Measure 0.6 km",
+        "name": "D-44",
         "lat": 28.365182,
         "lng": 76.917131
       },
       {
-        "name": "Path Measure 0.6 km",
+        "name": "D-45",
         "lat": 28.370258,
         "lng": 76.917219
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-46",
         "lat": 28.367325,
         "lng": 76.917056
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-47",
         "lat": 28.367421,
         "lng": 76.909859
       },
       {
-        "name": "Path Measure 1 km",
+        "name": "D-48",
         "lat": 28.370359,
         "lng": 76.909745
       },
       {
-        "name": "Path Measure 1 km",
+        "name": "D-49",
         "lat": 28.370251,
         "lng": 76.919307
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-50",
         "lat": 28.367428,
         "lng": 76.912037
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-51",
+        "lat": 28.369346,
+        "lng": 76.911033
+      },
+      {
+        "name": "D-52",
         "lat": 28.370288,
         "lng": 76.911034
       },
       {
-        "name": "Path Measure 0.5km",
+        "name": "D-53",
         "lat": 28.367355,
         "lng": 76.915842
       },
       {
-        "name": "Path Measure 0.5km",
+        "name": "D-54",
+        "lat": 28.368342,
+        "lng": 76.914845
+      },
+      {
+        "name": "D-55",
         "lat": 28.370251,
         "lng": 76.914856
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-56",
         "lat": 28.37205,
         "lng": 76.919738
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-57",
         "lat": 28.365163,
         "lng": 76.919548
       },
       {
-        "name": "Path Measure 0.9 km",
+        "name": "D-58",
         "lat": 28.368675,
         "lng": 76.904761
       },
       {
-        "name": "Path Measure 0.9 km",
+        "name": "D-59",
+        "lat": 28.372425,
+        "lng": 76.904939
+      },
+      {
+        "name": "D-60",
         "lat": 28.372338,
         "lng": 76.90944
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-61",
         "lat": 28.368803,
         "lng": 76.909378
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-62",
         "lat": 28.368852,
         "lng": 76.905129
       },
       {
-        "name": "Path Measure 1.7 km",
+        "name": "D-63",
         "lat": 28.376219,
         "lng": 76.878954
       },
       {
-        "name": "Path Measure 1.7 km",
+        "name": "D-64",
         "lat": 28.37594,
         "lng": 76.896314
       },
       {
-        "name": "Path Measure 1.2 km",
+        "name": "D-65",
         "lat": 28.379757,
         "lng": 76.896452
       },
       {
-        "name": "Path Measure 1.2 km",
+        "name": "D-66",
         "lat": 28.369045,
         "lng": 76.896309
       },
       {
-        "name": "Path Measure 0.9 km",
+        "name": "D-67",
         "lat": 28.37262,
         "lng": 76.896459
       },
       {
-        "name": "Path Measure 0.9 km",
+        "name": "D-68",
         "lat": 28.372419,
         "lng": 76.90484
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-69",
         "lat": 28.379603,
         "lng": 76.904923
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-70",
         "lat": 28.372609,
         "lng": 76.904784
       },
       {
-        "name": "Path Measure 1.6 km",
+        "name": "D-71",
         "lat": 28.369004,
         "lng": 76.894076
       },
       {
-        "name": "Path Measure 1.6 km",
+        "name": "D-72",
+        "lat": 28.371562,
+        "lng": 76.885488
+      },
+      {
+        "name": "D-73",
         "lat": 28.376056,
         "lng": 76.885567
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-74",
         "lat": 28.376062,
         "lng": 76.881037
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-75",
         "lat": 28.369349,
         "lng": 76.880899
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-76",
         "lat": 28.376065,
         "lng": 76.885476
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-77",
         "lat": 28.371628,
         "lng": 76.885416
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-78",
         "lat": 28.371566,
         "lng": 76.885322
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-79",
         "lat": 28.371633,
         "lng": 76.881085
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-80",
         "lat": 28.379927,
         "lng": 76.8835
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-81",
         "lat": 28.376234,
         "lng": 76.883429
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-82",
         "lat": 28.376201,
         "lng": 76.883589
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-83",
         "lat": 28.379886,
         "lng": 76.883625
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-84",
         "lat": 28.37982,
         "lng": 76.88916
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-85",
         "lat": 28.376125,
         "lng": 76.889063
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-86",
         "lat": 28.376034,
         "lng": 76.891802
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-87",
         "lat": 28.37978,
         "lng": 76.891828
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-88",
         "lat": 28.372576,
         "lng": 76.90197
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-89",
         "lat": 28.377213,
         "lng": 76.902134
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-90",
         "lat": 28.37962,
         "lng": 76.899439
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-91",
         "lat": 28.375126,
         "lng": 76.899332
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-92",
         "lat": 28.374977,
         "lng": 76.902008
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-93",
         "lat": 28.375132,
         "lng": 76.896709
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-94",
         "lat": 28.377391,
         "lng": 76.89957
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-95",
         "lat": 28.377327,
         "lng": 76.904706
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-96",
         "lat": 28.379488,
         "lng": 76.909715
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-97",
         "lat": 28.372498,
         "lng": 76.909574
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-98",
         "lat": 28.379482,
         "lng": 76.917389
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "D-99",
         "lat": 28.37491,
         "lng": 76.917245
       },
       {
-        "name": "Path Measure 0.3 km",
+        "name": "D-100",
         "lat": 28.372361,
         "lng": 76.917218
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-101",
         "lat": 28.374989,
         "lng": 76.909761
       },
       {
-        "name": "Path Measure 0.4 km",
+        "name": "D-102",
         "lat": 28.375027,
         "lng": 76.911159
       },
       {
-        "name": "Path Measure 0.4 km",
+        "name": "D-103",
         "lat": 28.378295,
         "lng": 76.911207
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-104",
         "lat": 28.378416,
         "lng": 76.909764
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-105",
         "lat": 28.378311,
         "lng": 76.917245
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-106",
         "lat": 28.372314,
         "lng": 76.9173
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-107",
         "lat": 28.379464,
         "lng": 76.917479
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-108",
         "lat": 28.379456,
         "lng": 76.909779
       },
       {
-        "name": "Path Measure 1.6 km",
+        "name": "D-109",
         "lat": 28.365191,
         "lng": 76.90456
       },
       {
-        "name": "Path Measure 1.6 km",
+        "name": "D-110",
         "lat": 28.379512,
         "lng": 76.904751
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-111",
         "lat": 28.365194,
         "lng": 76.909313
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-112",
         "lat": 28.37223,
         "lng": 76.909419
       },
       {
-        "name": "Path Measure1.2 km",
+        "name": "D-113",
         "lat": 28.36896,
         "lng": 76.896436
       },
       {
-        "name": "Path Measure1.2 km",
+        "name": "D-114",
         "lat": 28.379711,
         "lng": 76.896617
       },
       {
-        "name": "Path Measure 1 km",
+        "name": "D-115",
         "lat": 28.369871,
         "lng": 76.93416
       },
       {
-        "name": "Path Measure 1 km",
+        "name": "D-116",
         "lat": 28.369696,
         "lng": 76.943531
       },
       {
-        "name": "Path Measure 1 km",
+        "name": "D-117",
         "lat": 28.370103,
         "lng": 76.934189
       },
       {
-        "name": "Path Measure 1 km",
+        "name": "D-118",
         "lat": 28.369926,
         "lng": 76.943508
       },
       {
-        "name": "Path Measure 1 km",
+        "name": "D-119",
         "lat": 28.360564,
         "lng": 76.933954
       },
       {
-        "name": "Path Measure 1 km",
+        "name": "D-120",
         "lat": 28.369814,
         "lng": 76.934077
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-121",
         "lat": 28.364829,
         "lng": 76.932004
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-122",
         "lat": 28.371951,
         "lng": 76.932165
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-123",
         "lat": 28.36492,
         "lng": 76.921912
       },
       {
-        "name": "Path Measure 0.8 km",
+        "name": "D-124",
         "lat": 28.372138,
         "lng": 76.922029
       },
       {
-        "name": "Path Measure 0.4 km",
+        "name": "D-125",
         "lat": 28.361485,
         "lng": 76.913324
       },
       {
-        "name": "Path Measure 0.4 km",
+        "name": "D-126",
         "lat": 28.364908,
         "lng": 76.913418
       }
@@ -4557,12 +4711,17 @@ export const NETWORKS = {
     ],
     "stations": [
       {
-        "name": "MOPA",
+        "name": "G-1",
         "lat": 15.731962,
         "lng": 73.865676
       },
       {
-        "name": "Arambol 32 km",
+        "name": "G-2",
+        "lat": 15.651983,
+        "lng": 73.765601
+      },
+      {
+        "name": "G-3",
         "lat": 15.687015,
         "lng": 73.703334
       }
@@ -6239,237 +6398,357 @@ export const NETWORKS = {
     ],
     "stations": [
       {
-        "name": "Path Measure 11 km",
+        "name": "N-1",
         "lat": 19.947798,
         "lng": 73.841739
       },
       {
-        "name": "Path Measure 11 km",
+        "name": "N-2",
+        "lat": 19.988818,
+        "lng": 73.800044
+      },
+      {
+        "name": "N-3",
         "lat": 19.990978,
         "lng": 73.763576
       },
       {
-        "name": "Path Measure 6 km",
+        "name": "N-4",
         "lat": 19.944169,
         "lng": 73.774052
       },
       {
-        "name": "Path Measure 6 km",
+        "name": "N-5",
+        "lat": 19.973635,
+        "lng": 73.786141
+      },
+      {
+        "name": "N-6",
         "lat": 19.994112,
         "lng": 73.793984
       },
       {
-        "name": "Path Measure 2.9 km",
+        "name": "N-7",
         "lat": 19.968277,
         "lng": 73.799746
       },
       {
-        "name": "Path Measure 2.9 km",
+        "name": "N-8",
+        "lat": 19.979673,
+        "lng": 73.807428
+      },
+      {
+        "name": "N-9",
         "lat": 19.985209,
         "lng": 73.818514
       },
       {
-        "name": "Path Measure 5.4 km",
+        "name": "N-10",
         "lat": 19.997267,
         "lng": 73.781409
       },
       {
-        "name": "Path Measure 5.4 km",
+        "name": "N-11",
+        "lat": 20.007443,
+        "lng": 73.800403
+      },
+      {
+        "name": "N-12",
         "lat": 19.99424,
         "lng": 73.796809
       },
       {
-        "name": "Path Measure 6.6 km",
+        "name": "N-13",
         "lat": 19.990966,
         "lng": 73.763531
       },
       {
-        "name": "Path Measure 6.6 km",
+        "name": "N-14",
+        "lat": 19.968663,
+        "lng": 73.753495
+      },
+      {
+        "name": "N-15",
         "lat": 19.944218,
         "lng": 73.774022
       },
       {
-        "name": "Path Measure 7.6km",
+        "name": "N-16",
         "lat": 19.994526,
         "lng": 73.772215
       },
       {
-        "name": "Path Measure 7.6km",
+        "name": "N-17",
+        "lat": 19.991666,
+        "lng": 73.730268
+      },
+      {
+        "name": "N-18",
         "lat": 20.0025,
         "lng": 73.711436
       },
       {
-        "name": "Path Measure 6.4km",
+        "name": "N-19",
         "lat": 19.993851,
         "lng": 73.754087
       },
       {
-        "name": "Path Measure 6.4km",
+        "name": "N-20",
+        "lat": 20.00955,
+        "lng": 73.771648
+      },
+      {
+        "name": "N-21",
         "lat": 19.99461,
         "lng": 73.769269
       },
       {
-        "name": "Path Measure 1.8 km",
+        "name": "N-22",
         "lat": 20.00725,
         "lng": 73.771497
       },
       {
-        "name": "Path Measure 1.8 km",
+        "name": "N-23",
+        "lat": 20.011464,
+        "lng": 73.760405
+      },
+      {
+        "name": "N-24",
         "lat": 20.012058,
         "lng": 73.755913
       },
       {
-        "name": "Path Measure 2.1km",
+        "name": "N-25",
         "lat": 19.998075,
         "lng": 73.769048
       },
       {
-        "name": "Path Measure 2.1km",
+        "name": "N-26",
+        "lat": 20.00289,
+        "lng": 73.758506
+      },
+      {
+        "name": "N-27",
         "lat": 20.008547,
         "lng": 73.755511
       },
       {
-        "name": "Path Measure 1.3 km",
+        "name": "N-28",
         "lat": 20.000026,
         "lng": 73.762024
       },
       {
-        "name": "Path Measure 1.3 km",
+        "name": "N-29",
+        "lat": 20.005663,
+        "lng": 73.765583
+      },
+      {
+        "name": "N-30",
         "lat": 20.009209,
         "lng": 73.766829
       },
       {
-        "name": "Path Measure 4.9 km",
+        "name": "N-31",
+        "lat": 19.976555,
+        "lng": 73.789183
+      },
+      {
+        "name": "N-32",
         "lat": 19.990867,
         "lng": 73.763447
       },
       {
-        "name": "Path Measure 3.2 km",
+        "name": "N-33",
         "lat": 19.965271,
         "lng": 73.779888
       },
       {
-        "name": "Path Measure 3.2 km",
+        "name": "N-34",
+        "lat": 19.966366,
+        "lng": 73.76596
+      },
+      {
+        "name": "N-35",
         "lat": 19.969602,
         "lng": 73.753662
       },
       {
-        "name": "Path Measure 1.7km",
+        "name": "N-36",
         "lat": 19.994348,
         "lng": 73.790317
       },
       {
-        "name": "Path Measure 1.7km",
+        "name": "N-37",
+        "lat": 20.004004,
+        "lng": 73.790092
+      },
+      {
+        "name": "N-38",
         "lat": 20.004554,
         "lng": 73.793962
       },
       {
-        "name": "Path Measure 1.6 km",
+        "name": "N-39",
         "lat": 20.002105,
         "lng": 73.798864
       },
       {
-        "name": "Path Measure 1.6 km",
+        "name": "N-40",
+        "lat": 20.006227,
+        "lng": 73.793523
+      },
+      {
+        "name": "N-41",
         "lat": 20.012385,
         "lng": 73.790318
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "N-42",
         "lat": 20.004866,
         "lng": 73.784072
       },
       {
-        "name": "Path Measure 0.5 km",
+        "name": "N-43",
+        "lat": 20.004297,
+        "lng": 73.787811
+      },
+      {
+        "name": "N-44",
         "lat": 20.004119,
         "lng": 73.789047
       },
       {
-        "name": "Path Measure 1.5 km",
+        "name": "N-45",
         "lat": 20.008847,
         "lng": 73.772118
       },
       {
-        "name": "Path Measure 1.5 km",
+        "name": "N-46",
+        "lat": 20.005923,
+        "lng": 73.777873
+      },
+      {
+        "name": "N-47",
         "lat": 20.006974,
         "lng": 73.784904
       },
       {
-        "name": "Path Measure6.5km",
+        "name": "N-48",
         "lat": 19.959231,
         "lng": 73.754784
       },
       {
-        "name": "Path Measure6.5km",
+        "name": "N-49",
+        "lat": 19.951402,
+        "lng": 73.740797
+      },
+      {
+        "name": "N-50",
         "lat": 19.949866,
         "lng": 73.733581
       },
       {
-        "name": "Path Measure 4.7 km",
+        "name": "N-51",
         "lat": 19.9518,
         "lng": 73.736368
       },
       {
-        "name": "Path Measure 4.7 km",
+        "name": "N-52",
+        "lat": 19.970092,
+        "lng": 73.744484
+      },
+      {
+        "name": "N-53",
         "lat": 19.983083,
         "lng": 73.756239
       },
       {
-        "name": "Path Measure 2km",
+        "name": "N-54",
         "lat": 19.963239,
         "lng": 73.739351
       },
       {
-        "name": "Path Measure 2km",
+        "name": "N-55",
+        "lat": 19.961445,
+        "lng": 73.7474
+      },
+      {
+        "name": "N-56",
         "lat": 19.959187,
         "lng": 73.754619
       },
       {
-        "name": "Path Measure 1.8 km",
+        "name": "N-57",
         "lat": 19.990704,
         "lng": 73.799259
       },
       {
-        "name": "Path Measure 1.8 km",
+        "name": "N-58",
+        "lat": 19.986819,
+        "lng": 73.784866
+      },
+      {
+        "name": "N-59",
         "lat": 19.987267,
         "lng": 73.783396
       },
       {
-        "name": "Path Measure 1.2km",
+        "name": "N-60",
         "lat": 19.997212,
         "lng": 73.781435
       },
       {
-        "name": "Path Measure 1.2km",
+        "name": "N-61",
+        "lat": 19.988668,
+        "lng": 73.783271
+      },
+      {
+        "name": "N-62",
         "lat": 19.987273,
         "lng": 73.783752
       },
       {
-        "name": "Path Measure 4 km",
+        "name": "N-63",
         "lat": 19.979787,
         "lng": 73.77961
       },
       {
-        "name": "Path Measure 4 km",
+        "name": "N-64",
+        "lat": 19.978551,
+        "lng": 73.770626
+      },
+      {
+        "name": "N-65",
         "lat": 19.968791,
         "lng": 73.758022
       },
       {
-        "name": "Path Measure 1.6 km",
+        "name": "N-66",
         "lat": 19.978539,
         "lng": 73.770626
       },
       {
-        "name": "Path Measure 1.6 km",
+        "name": "N-67",
+        "lat": 19.973627,
+        "lng": 73.765914
+      },
+      {
+        "name": "N-68",
         "lat": 19.967939,
         "lng": 73.760134
       },
       {
-        "name": "Path Measure 1.9 km",
+        "name": "N-69",
         "lat": 19.966272,
         "lng": 73.771907
       },
       {
-        "name": "Path Measure 1.9 km",
+        "name": "N-70",
+        "lat": 19.960228,
+        "lng": 73.76875
+      },
+      {
+        "name": "N-71",
         "lat": 19.951946,
         "lng": 73.768856
       }
@@ -8946,187 +9225,287 @@ export const NETWORKS = {
     ],
     "stations": [
       {
-        "name": "Path Measure 6.5 km",
+        "name": "P-1",
         "lat": 18.509635,
         "lng": 73.815087
       },
       {
-        "name": "Path Measure 6.5 km",
+        "name": "P-2",
+        "lat": 18.525552,
+        "lng": 73.8119
+      },
+      {
+        "name": "P-3",
         "lat": 18.551181,
         "lng": 73.804925
       },
       {
-        "name": "Path Measure 9 km",
+        "name": "P-4",
         "lat": 18.551237,
         "lng": 73.804967
       },
       {
-        "name": "Path Measure 9 km",
+        "name": "P-5",
+        "lat": 18.570518,
+        "lng": 73.808347
+      },
+      {
+        "name": "P-6",
         "lat": 18.5919,
         "lng": 73.757504
       },
       {
-        "name": "Path Measure 9.2 km",
+        "name": "P-7",
         "lat": 18.58861,
         "lng": 73.779777
       },
       {
-        "name": "Path Measure 9.2 km",
+        "name": "P-8",
+        "lat": 18.557394,
+        "lng": 73.772201
+      },
+      {
+        "name": "P-9",
         "lat": 18.556024,
         "lng": 73.738786
       },
       {
-        "name": "Path Measure 5.1 km",
+        "name": "P-10",
         "lat": 18.537931,
         "lng": 73.802832
       },
       {
-        "name": "Path Measure 5.1 km",
+        "name": "P-11",
+        "lat": 18.544336,
+        "lng": 73.781178
+      },
+      {
+        "name": "P-12",
         "lat": 18.55215,
         "lng": 73.760622
       },
       {
-        "name": "Path Measure 15 km",
+        "name": "P-13",
         "lat": 18.537902,
         "lng": 73.805249
       },
       {
-        "name": "Path Measure 15 km",
+        "name": "P-14",
+        "lat": 18.552003,
+        "lng": 73.84081
+      },
+      {
+        "name": "P-15",
         "lat": 18.597564,
         "lng": 73.873346
       },
       {
-        "name": "Path Measure 6.4 km",
+        "name": "P-16",
         "lat": 18.586745,
         "lng": 73.790474
       },
       {
-        "name": "Path Measure 6.4 km",
+        "name": "P-17",
+        "lat": 18.61939,
+        "lng": 73.800928
+      },
+      {
+        "name": "P-18",
         "lat": 18.629914,
         "lng": 73.802782
       },
       {
-        "name": "Path Measure 10 km",
+        "name": "P-19",
         "lat": 18.640503,
         "lng": 73.794065
       },
       {
-        "name": "Path Measure 10 km",
+        "name": "P-20",
+        "lat": 18.631479,
+        "lng": 73.771809
+      },
+      {
+        "name": "P-21",
         "lat": 18.619789,
         "lng": 73.730197
       },
       {
-        "name": "Path Measure 6.3 km",
+        "name": "P-22",
         "lat": 18.591371,
         "lng": 73.739066
       },
       {
-        "name": "Path Measure 6.3 km",
+        "name": "P-23",
+        "lat": 18.607449,
+        "lng": 73.756332
+      },
+      {
+        "name": "P-24",
         "lat": 18.631375,
         "lng": 73.774699
       },
       {
-        "name": "Path Measure 5.2 km",
+        "name": "P-25",
         "lat": 18.606733,
         "lng": 73.754786
       },
       {
-        "name": "Path Measure 5.2 km",
+        "name": "P-26",
+        "lat": 18.589362,
+        "lng": 73.761718
+      },
+      {
+        "name": "P-27",
         "lat": 18.571221,
         "lng": 73.765413
       },
       {
-        "name": "Path Measure 3.2 km",
+        "name": "P-28",
         "lat": 18.578969,
         "lng": 73.766838
       },
       {
-        "name": "Path Measure 3.2 km",
+        "name": "P-29",
+        "lat": 18.567091,
+        "lng": 73.776068
+      },
+      {
+        "name": "P-30",
         "lat": 18.558561,
         "lng": 73.77658
       },
       {
-        "name": "Path Measure 1.2 km",
+        "name": "P-31",
         "lat": 18.580927,
         "lng": 73.784508
       },
       {
-        "name": "Path Measure 1.2 km",
+        "name": "P-32",
+        "lat": 18.578041,
+        "lng": 73.780583
+      },
+      {
+        "name": "P-33",
         "lat": 18.578828,
         "lng": 73.774794
       },
       {
-        "name": "Path Measure 3.3 km",
+        "name": "P-34",
         "lat": 18.572715,
         "lng": 73.878326
       },
       {
-        "name": "Path Measure 3.3 km",
+        "name": "P-35",
+        "lat": 18.575397,
+        "lng": 73.899469
+      },
+      {
+        "name": "P-36",
         "lat": 18.578793,
         "lng": 73.907877
       },
       {
-        "name": "Path Measure 6.3 km",
+        "name": "P-37",
+        "lat": 18.657779,
+        "lng": 73.812126
+      },
+      {
+        "name": "P-38",
         "lat": 18.682576,
         "lng": 73.818715
       },
       {
-        "name": "Path Measure 2 km",
+        "name": "P-39",
+        "lat": 18.643998,
+        "lng": 73.800189
+      },
+      {
+        "name": "P-40",
         "lat": 18.65002,
         "lng": 73.809302
       },
       {
-        "name": "Path Measure 11.5 km",
+        "name": "P-41",
         "lat": 18.45075,
         "lng": 73.879377
       },
       {
-        "name": "Path Measure 11.5 km",
+        "name": "P-42",
+        "lat": 18.530217,
+        "lng": 73.873343
+      },
+      {
+        "name": "P-43",
         "lat": 18.539913,
         "lng": 73.882902
       },
       {
-        "name": "Path Measure 1.5km",
+        "name": "P-44",
         "lat": 18.501348,
         "lng": 73.869301
       },
       {
-        "name": "Path Measure 1.5km",
+        "name": "P-45",
+        "lat": 18.499946,
+        "lng": 73.86453
+      },
+      {
+        "name": "P-46",
         "lat": 18.499912,
         "lng": 73.859258
       },
       {
-        "name": "Path Measure 8 km",
+        "name": "P-47",
         "lat": 18.510507,
         "lng": 73.868347
       },
       {
-        "name": "Path Measure 8 km",
+        "name": "P-48",
+        "lat": 18.527754,
+        "lng": 73.850708
+      },
+      {
+        "name": "P-49",
         "lat": 18.548716,
         "lng": 73.87114
       },
       {
-        "name": "Path Measure 1 km",
+        "name": "P-50",
         "lat": 18.539565,
         "lng": 73.879783
       },
       {
-        "name": "Path Measure 1 km",
+        "name": "P-51",
+        "lat": 18.543773,
+        "lng": 73.879478
+      },
+      {
+        "name": "P-52",
         "lat": 18.544932,
         "lng": 73.877152
       },
       {
-        "name": "Path Measure 10.5 km",
+        "name": "P-53",
+        "lat": 18.468198,
+        "lng": 73.785219
+      },
+      {
+        "name": "P-54",
         "lat": 18.448307,
         "lng": 73.762004
       },
       {
-        "name": "Path Measure 9 km",
+        "name": "P-55",
         "lat": 18.489117,
         "lng": 73.81438
       },
       {
-        "name": "Path Measure 9 km",
+        "name": "P-56",
+        "lat": 18.478773,
+        "lng": 73.83848
+      },
+      {
+        "name": "P-57",
         "lat": 18.480743,
         "lng": 73.872366
       }
@@ -9414,32 +9793,47 @@ export const NETWORKS = {
     ],
     "stations": [
       {
-        "name": "Path Measure 3.6 km",
+        "name": "U-1",
         "lat": 28.492941,
         "lng": 77.088882
       },
       {
-        "name": "Path Measure 3.6 km",
+        "name": "U-2",
+        "lat": 28.491382,
+        "lng": 77.080614
+      },
+      {
+        "name": "U-3",
         "lat": 28.492421,
         "lng": 77.058642
       },
       {
-        "name": "Path Measure 4.2 km",
+        "name": "U-4",
         "lat": 28.492122,
         "lng": 77.083933
       },
       {
-        "name": "Path Measure 4.2 km",
+        "name": "U-5",
+        "lat": 28.499651,
+        "lng": 77.078224
+      },
+      {
+        "name": "U-6",
         "lat": 28.492432,
         "lng": 77.058666
       },
       {
-        "name": "Path Measure 0.3 km",
+        "name": "U-7",
         "lat": 28.492418,
         "lng": 77.079198
       },
       {
-        "name": "Path Measure 0.3 km",
+        "name": "U-8",
+        "lat": 28.49255,
+        "lng": 77.077954
+      },
+      {
+        "name": "U-9",
         "lat": 28.492796,
         "lng": 77.076776
       }

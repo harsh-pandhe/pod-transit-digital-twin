@@ -34,57 +34,37 @@ body {
 .leaflet-container { background: #0a0e1a !important; }
 .leaflet-tile-pane { filter: brightness(0.7) contrast(1.2) saturate(0.5); }
 
-/* ─── 3D CSS Vehicle Markers ─── */
-.pod-marker { transition: transform 0.1s linear; z-index: 1000 !important; }
-
-/* The Cube System */
-.cuboid {
-  width: 100%; height: 100%; position: relative;
-  transform-style: preserve-3d;
+/* ─── Refined Dot Markers ─── */
+.pod-marker {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000 !important;
 }
-.cuboid__side {
-  position: absolute;
+
+.pod-dot {
+  width: 14px;
+  height: 14px;
   background: var(--pod-color, #3b82f6);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-/* Side positioning (Small scale for map markers) */
-.cuboid__side:nth-child(1) { height: var(--thickness); width: 100%; top: 0; transform: translate(0, -50%) rotateX(90deg); }
-.cuboid__side:nth-child(2) { height: 100%; width: var(--thickness); top: 50%; right: 0; transform: translate(50%, -50%) rotateY(90deg); }
-.cuboid__side:nth-child(3) { width: 100%; height: var(--thickness); bottom: 0; transform: translate(0%, 50%) rotateX(90deg); }
-.cuboid__side:nth-child(4) { height: 100%; width: var(--thickness); left: 0; top: 50%; transform: translate(-50%, -50%) rotateY(90deg); }
-.cuboid__side:nth-child(5) { height: 100%; width: 100%; transform: translate3d(0, 0, calc(var(--thickness) * 0.5)); top: 0; left: 0; }
-.cuboid__side:nth-child(6) { height: 100%; width: 100%; transform: translate3d(0, 0, calc(var(--thickness) * -0.5)) rotateY(180deg); top: 0; left: 0; }
-
-.pod-3d-scene {
-  width: 32px; height: 18px;
-  transform: rotateX(45deg) rotateZ(0deg); /* Tilt for 3D feel */
-  transform-style: preserve-3d;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px var(--pod-color, #3b82f6);
   position: relative;
+  transition: all 0.3s ease;
 }
 
-.car {
-  width: 100%; height: 100%;
+.pod-dot::after {
+  content: '';
   position: absolute;
-  transform-style: preserve-3d;
-  animation: pod-bob 2s infinite ease-in-out alternate;
+  top: -4px; left: -4px; right: -4px; bottom: -4px;
+  border-radius: 50%;
+  background: var(--pod-color, #3b82f6);
+  opacity: 0.2;
+  animation: pod-pulse 2s infinite;
 }
 
-@keyframes pod-bob { from { transform: translateY(0); } to { transform: translateY(-3px); } }
-
-/* Car Parts */
-.car__body--bottom { position: absolute; bottom: 0; width: 100%; height: 50%; --thickness: 14px; }
-.car__body--top { position: absolute; bottom: 50%; width: 60%; height: 50%; left: 20%; --thickness: 10px; }
-
-.car__siren { position: absolute; top: -4px; height: 4px; width: 100%; display: flex; justify-content: center; gap: 2px; transform: translate3d(0,0,10px); }
-.siren-unit { width: 6px; height: 3px; --thickness: 4px; border-radius: 1px; }
-.siren--blue { background: #3b82f6; box-shadow: 0 0 10px #3b82f6; animation: siren-flash 0.4s infinite alternate; }
-.siren--red { background: #ef4444; box-shadow: 0 0 10px #ef4444; animation: siren-flash 0.4s infinite alternate-reverse; }
-
-@keyframes siren-flash { from { opacity: 0.3; } to { opacity: 1; } }
-
-.car__wheel { position: absolute; width: 6px; height: 6px; background: #0f172a; --thickness: 4px; border-radius: 50%; bottom: -3px; }
-.wheel--f { left: 15%; }
-.wheel--r { right: 15%; }
+@keyframes pod-pulse {
+  0% { transform: scale(1); opacity: 0.4; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
 
 /* State Colors */
 .pod-marker.active { --pod-color: #3b82f6; }
@@ -94,14 +74,13 @@ body {
 
 .pod-label {
   position: absolute;
-  top: -20px;
+  top: -18px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(4px);
+  background: rgba(10, 14, 26, 0.8);
+  color: white;
   padding: 2px 6px;
   border-radius: 4px;
-  color: #fff;
   font-size: 9px;
   font-weight: 800;
   white-space: nowrap;
