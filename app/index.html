@@ -60,15 +60,19 @@
 
     <!-- Side Panel -->
     <aside id="side-panel">
-      <!-- Simulation Tab -->
-      <div class="panel-content active" id="panel-simulation">
+      <!-- Panel Contents -->
+      <div id="panel-simulation" class="panel-content active">
         <div class="panel-section">
-          <h3>🚀 Live Pods</h3>
-          <div id="pod-list" class="pod-list"></div>
+          <h3><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Live Pods</h3>
+          <div id="pod-list" class="pod-list">
+            <!-- Dynamic pod items -->
+          </div>
         </div>
         <div class="panel-section">
-          <h3>⚡ Events</h3>
-          <div id="event-feed" class="event-feed"></div>
+          <h3><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Network Events</h3>
+          <div id="event-feed" class="event-feed">
+            <!-- Dynamic events -->
+          </div>
         </div>
         <div class="panel-section">
           <button id="btn-obstacle" class="action-btn danger">
@@ -82,104 +86,168 @@
         </div>
       </div>
 
-      <!-- Passenger Tab -->
-      <div class="panel-content" id="panel-passenger">
-        <div class="passenger-app">
-          <div class="phone-header">
-            <span>🚄</span> Book Your Pod
-          </div>
-          <div id="booking-form" class="booking-form">
-            <div class="form-group">
-              <label>📍 Origin Station</label>
-              <select id="origin-select"><option value="">Select origin...</option></select>
-            </div>
-            <div class="form-group">
-              <label>🏁 Destination</label>
-              <select id="dest-select"><option value="">Select destination...</option></select>
-            </div>
-            <div class="form-row">
-              <label class="toggle-label">
-                <input type="checkbox" id="women-only" />
-                <span class="toggle-switch"></span>
-                Women-Only Pod
-              </label>
-            </div>
-            <div class="form-row">
-              <label class="toggle-label">
-                <input type="checkbox" id="priority-ride" />
-                <span class="toggle-switch"></span>
-                Priority Booking
-              </label>
-            </div>
-            <div class="fare-estimate" id="fare-estimate" style="display:none">
-              <div class="fare-row"><span>Estimated fare</span><span id="fare-amount">₹0</span></div>
-              <div class="fare-row"><span>ETA</span><span id="eta-amount">--</span></div>
-              <div class="fare-row"><span>Distance</span><span id="dist-amount">--</span></div>
-            </div>
-            <button id="btn-book" class="action-btn primary full-width" disabled>
-              Request Ride
-            </button>
-          </div>
-          <div id="ride-tracker" class="ride-tracker" style="display:none">
-            <div class="tracker-status" id="tracker-status">
-              <div class="status-dot"></div>
-              <span>Finding your pod...</span>
-            </div>
-            <div class="tracker-info">
-              <div class="tracker-row">
-                <span>Pod</span><span id="tracker-pod">--</span>
+      <div id="panel-passenger" class="panel-content">
+        <div class="phone-container">
+          <div class="phone-bezel">
+            <div class="phone-screen">
+              <div class="phone-header">
+                <span class="time">9:41</span>
+                <div class="phone-notches">
+                  <div class="notch"></div>
+                </div>
+                <div class="phone-icons">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 18H22V10H20M1 20h22V4H1v16z"/></svg>
+                </div>
               </div>
-              <div class="tracker-row">
-                <span>Battery</span><span id="tracker-battery">--</span>
+              
+              <div id="booking-form" class="phone-app-content">
+                <h1 class="phone-title">Where to?</h1>
+                <p class="phone-subtitle">Point-to-point autonomous transit</p>
+                
+                <div class="phone-input-group">
+                  <div class="input-row">
+                    <span class="dot origin-dot"></span>
+                    <select id="origin-select" class="phone-select">
+                      <option value="">Choose origin...</option>
+                    </select>
+                  </div>
+                  <div class="input-divider"></div>
+                  <div class="input-row">
+                    <span class="dot dest-dot"></span>
+                    <select id="dest-select" class="phone-select">
+                      <option value="">Set destination...</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="phone-option-card">
+                  <div class="option-info">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <span>Women-Only Pod</span>
+                  </div>
+                  <label class="toggle">
+                    <input type="checkbox" id="women-only">
+                    <span class="slider"></span>
+                  </label>
+                </div>
+
+                <div id="fare-estimate" class="phone-fare-card" style="display:none">
+                  <div class="fare-main">
+                    <div>
+                      <div class="fare-label" id="fare-type-label">Standard Pod</div>
+                      <div class="fare-meta"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent-color)"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> Shortest Path AI</div>
+                    </div>
+                    <div id="fare-amount" class="fare-price">₹0</div>
+                  </div>
+                  <div class="fare-stats">
+                    <div class="f-stat"><span id="eta-amount">---</span><label>ETA</label></div>
+                    <div class="f-stat"><span id="dist-amount">---</span><label>DIST</label></div>
+                  </div>
+                  <button id="btn-book" class="phone-book-btn" disabled>Request Ride</button>
+                </div>
               </div>
-              <div class="tracker-row">
-                <span>ETA</span><span id="tracker-eta">--</span>
-              </div>
-              <div class="tracker-row">
-                <span>Speed</span><span id="tracker-speed">--</span>
+
+              <div id="ride-tracker" class="phone-app-content" style="display:none">
+                <div class="tracker-header">
+                  <div id="tracker-status" class="tracker-status-badge">
+                    <div class="pulse-dot"></div>
+                    <span>Searching...</span>
+                  </div>
+                </div>
+                <div class="tracker-pod-info">
+                  <div class="tracker-main">
+                    <img src="/pod_3d.png" alt="Pod" class="tracker-img">
+                    <div class="tracker-details">
+                      <h2 id="tracker-pod">P--</h2>
+                      <div class="tracker-meta">
+                        <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 12a11 11 0 1 1-22 0 11 11 0 0 1 22 0Z"/><path d="m9 12 2 2 4-4"/></svg> Verified</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tracker-grid">
+                    <div class="t-stat">
+                      <span class="t-val" id="tracker-battery">0%</span>
+                      <span class="t-lbl">Battery</span>
+                    </div>
+                    <div class="t-stat">
+                      <span class="t-val" id="tracker-eta">--m</span>
+                      <span class="t-lbl">ETA</span>
+                    </div>
+                    <div class="t-stat">
+                      <span class="t-val" id="tracker-speed">0km/h</span>
+                      <span class="t-lbl">Speed</span>
+                    </div>
+                  </div>
+                  <div class="progress-container">
+                    <div id="ride-progress" class="progress-bar"></div>
+                  </div>
+                </div>
+                <button id="btn-cancel-ride" class="phone-cancel-btn">Cancel Ride</button>
               </div>
             </div>
-            <div class="progress-bar">
-              <div class="progress-fill" id="ride-progress"></div>
-            </div>
-            <button id="btn-cancel-ride" class="action-btn danger full-width">Cancel Ride</button>
           </div>
         </div>
       </div>
 
-      <!-- Dashboard Tab -->
-      <div class="panel-content" id="panel-dashboard">
+      <div id="panel-dashboard" class="panel-content">
+        <div class="dashboard-header">
+          <h2>Fleet Monitor</h2>
+          <p>Real-time autonomous systems control</p>
+        </div>
+
         <div class="dashboard-grid">
-          <div class="stat-card">
-            <div class="stat-value" id="stat-active">0</div>
-            <div class="stat-label">Active Pods</div>
+          <div class="kpi-card">
+            <div class="kpi-head">
+              <span class="kpi-title">Active Fleet</span>
+              <div class="kpi-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-1.1 0-2 .9-2 2v7c0 .6.4 1 1 1h1"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></div>
+            </div>
+            <div class="kpi-value"><span id="stat-active">0</span><span class="kpi-total" id="stat-total">/ 0</span></div>
           </div>
-          <div class="stat-card">
-            <div class="stat-value" id="stat-passengers">0</div>
-            <div class="stat-label">Passengers</div>
+          <div class="kpi-card">
+            <div class="kpi-head">
+              <span class="kpi-title">Avg Energy</span>
+              <div class="kpi-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><rect width="16" height="10" x="2" y="7" rx="2" ry="2"/><path d="M22 12h-1"/><path d="M6 7v0"/><path d="M6 17v0"/></svg></div>
+            </div>
+            <div class="kpi-value"><span id="stat-avg-battery">0%</span></div>
           </div>
-          <div class="stat-card">
-            <div class="stat-value" id="stat-avg-battery">100%</div>
-            <div class="stat-label">Avg Battery</div>
+          <div class="kpi-card">
+            <div class="kpi-head">
+              <span class="kpi-title">Passengers</span>
+              <div class="kpi-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="19" cy="11" r="3"/></svg></div>
+            </div>
+            <div class="kpi-value"><span id="stat-passengers">0</span></div>
           </div>
-          <div class="stat-card">
-            <div class="stat-value" id="stat-avg-speed">0</div>
-            <div class="stat-label">Avg Speed (km/h)</div>
+          <div class="kpi-card">
+            <div class="kpi-head">
+              <span class="kpi-title">Avg Speed</span>
+              <div class="kpi-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></div>
+            </div>
+            <div class="kpi-value"><span id="stat-avg-speed">0</span> <span class="kpi-total">km/h</span></div>
           </div>
         </div>
-        <div class="panel-section">
-          <h3>📊 Fleet Rebalancing AI</h3>
-          <div id="rebalance-grid" class="rebalance-grid"></div>
-        </div>
-        <div class="panel-section">
-          <h3>🔗 RV-Graph Status</h3>
-          <div class="rv-graph" id="rv-graph">
-            <canvas id="rv-canvas" width="320" height="180"></canvas>
+
+        <div class="dashboard-section chart-section">
+          <div class="section-head">
+            <h3>Demand Rebalancing <span class="badge live">Live</span></h3>
+            <p>Commuter requests vs Fleet supply</p>
+          </div>
+          <div id="rebalance-grid" class="rebalance-grid">
+            <!-- Dynamic rebalance bars -->
           </div>
         </div>
-        <div class="panel-section">
-          <h3>📋 System Log</h3>
-          <div id="system-log" class="system-log"></div>
+
+        <div class="dashboard-section rv-section">
+          <h3>Request-Vehicle Graph</h3>
+          <div class="rv-container">
+            <canvas id="rv-canvas" width="300" height="180"></canvas>
+          </div>
+        </div>
+
+        <div class="dashboard-section console-section">
+          <h3>System Log Telemetry</h3>
+          <div id="system-log" class="system-log">
+            <!-- Dynamic log lines -->
+          </div>
         </div>
       </div>
     </aside>

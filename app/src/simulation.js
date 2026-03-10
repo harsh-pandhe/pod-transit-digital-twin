@@ -191,6 +191,7 @@ export class SimulationEngine {
         speed: 30 + Math.random() * 20, // km/h
         lat: node.lat,
         lng: node.lng,
+        heading: 0, // Orientation in degrees
         currentNodeId: node.id,
         targetNodeId: null,
         path: [],
@@ -221,6 +222,7 @@ export class SimulationEngine {
       speed: 30 + Math.random() * 20,
       lat: node.lat,
       lng: node.lng,
+      heading: 0,
       currentNodeId: node.id,
       targetNodeId: null,
       path: [],
@@ -499,8 +501,18 @@ export class SimulationEngine {
           const frac = exactIdx - idx;
           
           if (idx < totalPts - 1) {
-            pod.lat = lerp(edge.coords[idx][0], edge.coords[idx + 1][0], frac);
-            pod.lng = lerp(edge.coords[idx][1], edge.coords[idx + 1][1], frac);
+            const nextLat = lerp(edge.coords[idx][0], edge.coords[idx + 1][0], frac);
+            const nextLng = lerp(edge.coords[idx][1], edge.coords[idx + 1][1], frac);
+            
+            // Calculate heading (degrees)
+            const y = Math.sin((nextLng - pod.lng) * Math.PI / 180) * Math.cos(nextLat * Math.PI / 180);
+            const x = Math.cos(pod.lat * Math.PI / 180) * Math.sin(nextLat * Math.PI / 180) -
+                      Math.sin(pod.lat * Math.PI / 180) * Math.cos(nextLat * Math.PI / 180) * Math.cos((nextLng - pod.lng) * Math.PI / 180);
+            const angle = Math.atan2(y, x) * 180 / Math.PI;
+            pod.heading = (angle + 360) % 360;
+            
+            pod.lat = nextLat;
+            pod.lng = nextLng;
           }
         }
         

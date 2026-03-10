@@ -154,20 +154,22 @@ function updatePodMarkers(pods) {
     if (!marker) {
       const icon = L.divIcon({
         className: 'pod-marker',
-        html: `<div class="pod-marker-inner ${stateClass}">${pod.id.replace('P','')}</div>`,
-        iconSize: [22, 22],
-        iconAnchor: [11, 11],
+        html: `
+          <div class="pod-marker-inner ${stateClass}" style="transform: rotate(${pod.heading || 0}deg)"></div>
+          <div class="pod-label">${pod.id}</div>
+        `,
+        iconSize: [28, 28],
+        iconAnchor: [14, 14],
       });
       marker = L.marker([pod.lat, pod.lng], { icon, zIndexOffset: 1000 }).addTo(map);
-      marker.bindTooltip(`${pod.id} — ${pod.state} — ${pod.battery.toFixed(0)}%`, { direction: 'top', offset: [0, -14] });
       podMarkers[pod.id] = marker;
     } else {
       marker.setLatLng([pod.lat, pod.lng]);
       const inner = marker.getElement()?.querySelector('.pod-marker-inner');
       if (inner) {
         inner.className = `pod-marker-inner ${stateClass}`;
+        inner.style.transform = `rotate(${pod.heading || 0}deg)`;
       }
-      marker.setTooltipContent(`${pod.id} — ${pod.state} — ${pod.battery.toFixed(0)}%`);
     }
   }
 }
@@ -314,11 +316,16 @@ function initUI() {
   destSel.addEventListener('change', updateBookBtn);
   
   bookBtn.addEventListener('click', () => {
+    console.log('[Booking] Requesting ride...', originSel.value, destSel.value);
     const womenOnly = document.getElementById('women-only').checked;
     const ride = sim.bookRide(originSel.value, destSel.value, womenOnly);
     if (ride) {
+      console.log('[Booking] Success:', ride);
       document.getElementById('booking-form').style.display = 'none';
       document.getElementById('ride-tracker').style.display = 'block';
+    } else {
+      console.warn('[Booking] Failed: No pod found or route invalid');
+      alert('No pods available right now. Please try again in a moment.');
     }
   });
 
@@ -424,6 +431,7 @@ function updateDashboard() {
   
   const stats = sim.getStats();
   document.getElementById('stat-active').textContent = stats.active;
+  document.getElementById('stat-total').textContent = `/ ${sim.pods.length}`;
   document.getElementById('stat-passengers').textContent = stats.passengers;
   document.getElementById('stat-avg-battery').textContent = `${stats.avgBattery.toFixed(0)}%`;
   document.getElementById('stat-avg-speed').textContent = stats.avgSpeed.toFixed(0);
@@ -437,7 +445,7 @@ function updateDashboard() {
       <div class="rebalance-bar">
         <div class="rebalance-fill ${r.ratio > 0.6 ? 'high' : r.ratio > 0.3 ? 'med' : 'low'}" style="width:${r.ratio * 100}%"></div>
       </div>
-      <span class="rebalance-action ${r.action}">${r.action === 'dispatch' ? '🚀 Dispatch' : r.action === 'surge' ? '🔴 Surge' : '✅ OK'}</span>
+      <span class="rebalance-action ${r.action === 'dispatch' ? 'dispatch' : r.action === 'surge' ? 'surge' : ''}">${r.action === 'dispatch' ? '🚀 Dispatch' : r.action === 'surge' ? '🔴 Surge' : '✅ Balanced'}</span>
     </div>
   `).join('');
 }
@@ -451,24 +459,22 @@ function updateRideTracker() {
   const ride = pod.assignedRide;
   if (!ride) return;
   
-  const statusEl = document.getElementById('tracker-status');
-  const phase = ride.phase;
-  statusEl.innerHTML = `
-    <div class="status-dot"></div>
-    <span>${phase === 'pickup' ? '🚖 Pod coming to you...' : phase === 'enroute' ? '🚀 On the way!' : '🎉 Arrived!'}</span>
-  `;
+  const statusEl = document.querySelector('#tracker-status span');
+  const phaseValue = ride.phase;
+  statusEl.textContent = phaseValue === 'pickup' ? 'Arriving...' : phaseValue === 'enroute' ? 'En Route' : 'Arrived!';
   
   document.getElementById('tracker-pod').textContent = pod.id;
   document.getElementById('tracker-battery').textContent = `${pod.battery.toFixed(0)}%`;
-  document.getElementById('tracker-eta').textContent = `${Math.max(1, Math.round(sim.rideRequest.estimatedETA * (1 - ride.progress)))} min`;
-  document.getElementById('tracker-speed').textContent = `${pod.speed.toFixed(0)} km/h`;
+  document.getElementById('tracker-eta').textContent = `${Math.max(1, Math.round(sim.rideRequest.estimatedETA * (1 - ride.progress)))}m`;
+  document.getElementById('tracker-speed').textContent = `${pod.speed.toFixed(0)}km/h`;
   document.getElementById('ride-progress').style.width = `${ride.progress * 100}%`;
   
   if (ride.phase === 'completed') {
     setTimeout(() => {
       document.getElementById('booking-form').style.display = 'block';
       document.getElementById('ride-tracker').style.display = 'none';
-    }, 2000);
+      sim.rideRequest = null;
+    }, 4000);
   }
 }
 
