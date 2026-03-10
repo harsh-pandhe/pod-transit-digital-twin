@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pod Transit Digital Twin — Real-Time APM Simulation</title>
+  <meta name="description" content="Interactive digital twin simulation of Automated People Mover pod transit networks across 6 Indian cities with real route data, Dijkstra routing, and fleet orchestration." />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Map Container -->
+    <div id="map"></div>
+
+    <!-- Top Bar -->
+    <header id="top-bar">
+      <div class="logo-section">
+        <div class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+          </svg>
+        </div>
+        <div>
+          <h1>Pod Transit <span class="accent">Digital Twin</span></h1>
+          <p class="subtitle">Real-Time APM Network Simulation</p>
+        </div>
+      </div>
+      <div class="network-selector">
+        <label for="network-select">Network:</label>
+        <select id="network-select"></select>
+      </div>
+      <div class="sim-controls">
+        <button id="btn-play-pause" class="control-btn" title="Play/Pause">
+          <svg id="icon-play" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+          <svg id="icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </button>
+        <button id="btn-speed" class="control-btn" title="Speed">1×</button>
+      </div>
+    </header>
+
+    <!-- Tab Navigation -->
+    <nav id="tab-nav">
+      <button class="tab active" data-tab="simulation">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Simulation
+      </button>
+      <button class="tab" data-tab="passenger">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Passenger
+      </button>
+      <button class="tab" data-tab="dashboard">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </button>
+    </nav>
+
+    <!-- Side Panel -->
+    <aside id="side-panel">
+      <!-- Simulation Tab -->
+      <div class="panel-content active" id="panel-simulation">
+        <div class="panel-section">
+          <h3>🚀 Live Pods</h3>
+          <div id="pod-list" class="pod-list"></div>
+        </div>
+        <div class="panel-section">
+          <h3>⚡ Events</h3>
+          <div id="event-feed" class="event-feed"></div>
+        </div>
+        <div class="panel-section">
+          <button id="btn-obstacle" class="action-btn danger">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            Trigger Obstacle Event
+          </button>
+          <button id="btn-add-pod" class="action-btn primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            Deploy New Pod
+          </button>
+        </div>
+      </div>
+
+      <!-- Passenger Tab -->
+      <div class="panel-content" id="panel-passenger">
+        <div class="passenger-app">
+          <div class="phone-header">
+            <span>🚄</span> Book Your Pod
+          </div>
+          <div id="booking-form" class="booking-form">
+            <div class="form-group">
+              <label>📍 Origin Station</label>
+              <select id="origin-select"><option value="">Select origin...</option></select>
+            </div>
+            <div class="form-group">
+              <label>🏁 Destination</label>
+              <select id="dest-select"><option value="">Select destination...</option></select>
+            </div>
+            <div class="form-row">
+              <label class="toggle-label">
+                <input type="checkbox" id="women-only" />
+                <span class="toggle-switch"></span>
+                Women-Only Pod
+              </label>
+            </div>
+            <div class="form-row">
+              <label class="toggle-label">
+                <input type="checkbox" id="priority-ride" />
+                <span class="toggle-switch"></span>
+                Priority Booking
+              </label>
+            </div>
+            <div class="fare-estimate" id="fare-estimate" style="display:none">
+              <div class="fare-row"><span>Estimated fare</span><span id="fare-amount">₹0</span></div>
+              <div class="fare-row"><span>ETA</span><span id="eta-amount">--</span></div>
+              <div class="fare-row"><span>Distance</span><span id="dist-amount">--</span></div>
+            </div>
+            <button id="btn-book" class="action-btn primary full-width" disabled>
+              Request Ride
+            </button>
+          </div>
+          <div id="ride-tracker" class="ride-tracker" style="display:none">
+            <div class="tracker-status" id="tracker-status">
+              <div class="status-dot"></div>
+              <span>Finding your pod...</span>
+            </div>
+            <div class="tracker-info">
+              <div class="tracker-row">
+                <span>Pod</span><span id="tracker-pod">--</span>
+              </div>
+              <div class="tracker-row">
+                <span>Battery</span><span id="tracker-battery">--</span>
+              </div>
+              <div class="tracker-row">
+                <span>ETA</span><span id="tracker-eta">--</span>
+              </div>
+              <div class="tracker-row">
+                <span>Speed</span><span id="tracker-speed">--</span>
+              </div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" id="ride-progress"></div>
+            </div>
+            <button id="btn-cancel-ride" class="action-btn danger full-width">Cancel Ride</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Tab -->
+      <div class="panel-content" id="panel-dashboard">
+        <div class="dashboard-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="stat-active">0</div>
+            <div class="stat-label">Active Pods</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-passengers">0</div>
+            <div class="stat-label">Passengers</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-avg-battery">100%</div>
+            <div class="stat-label">Avg Battery</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-avg-speed">0</div>
+            <div class="stat-label">Avg Speed (km/h)</div>
+          </div>
+        </div>
+        <div class="panel-section">
+          <h3>📊 Fleet Rebalancing AI</h3>
+          <div id="rebalance-grid" class="rebalance-grid"></div>
+        </div>
+        <div class="panel-section">
+          <h3>🔗 RV-Graph Status</h3>
+          <div class="rv-graph" id="rv-graph">
+            <canvas id="rv-canvas" width="320" height="180"></canvas>
+          </div>
+        </div>
+        <div class="panel-section">
+          <h3>📋 System Log</h3>
+          <div id="system-log" class="system-log"></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Station Info Popup -->
+    <div id="station-popup" class="station-popup" style="display:none">
+      <button class="popup-close" id="popup-close">×</button>
+      <h4 id="popup-station-name">Station</h4>
+      <div class="popup-stats">
+        <div><span>Waiting</span><span id="popup-waiting">0</span></div>
+        <div><span>Demand</span><span id="popup-demand">Low</span></div>
+        <div><span>Incoming</span><span id="popup-incoming">0</span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
