@@ -142,6 +142,19 @@ function showStationPopup(station) {
 }
 
 // ── Pod Markers ──
+function createCuboidHtml(className) {
+  return `
+    <div class="cuboid ${className || ''}">
+      <div class="cuboid__side"></div>
+      <div class="cuboid__side"></div>
+      <div class="cuboid__side"></div>
+      <div class="cuboid__side"></div>
+      <div class="cuboid__side"></div>
+      <div class="cuboid__side"></div>
+    </div>
+  `;
+}
+
 function updatePodMarkers(pods) {
   for (const pod of pods) {
     let marker = podMarkers[pod.id];
@@ -152,23 +165,38 @@ function updatePodMarkers(pods) {
       : pod.state === POD_STATES.IDLE ? 'idle' : 'active';
     
     if (!marker) {
-      const icon = L.divIcon({
-        className: 'pod-marker',
-        html: `
-          <div class="pod-marker-inner ${stateClass}" style="transform: rotate(${pod.heading || 0}deg)"></div>
+      const html = `
+        <div class="pod-3d-scene">
+          <div class="car" style="transform: rotateZ(${pod.heading || 0}deg)">
+            ${createCuboidHtml('car__body--bottom')}
+            ${createCuboidHtml('car__body--top')}
+            <div class="car__siren">
+              <div class="siren-unit siren--blue">${createCuboidHtml()}</div>
+              <div class="siren-unit siren--red">${createCuboidHtml()}</div>
+            </div>
+            <div class="car__wheel wheel--f"></div>
+            <div class="car__wheel wheel--r"></div>
+          </div>
           <div class="pod-label">${pod.id}</div>
-        `,
-        iconSize: [28, 28],
-        iconAnchor: [14, 14],
+        </div>
+      `;
+      const icon = L.divIcon({
+        className: `pod-marker ${stateClass}`,
+        html: html,
+        iconSize: [32, 18],
+        iconAnchor: [16, 9],
       });
       marker = L.marker([pod.lat, pod.lng], { icon, zIndexOffset: 1000 }).addTo(map);
       podMarkers[pod.id] = marker;
     } else {
       marker.setLatLng([pod.lat, pod.lng]);
-      const inner = marker.getElement()?.querySelector('.pod-marker-inner');
-      if (inner) {
-        inner.className = `pod-marker-inner ${stateClass}`;
-        inner.style.transform = `rotate(${pod.heading || 0}deg)`;
+      const el = marker.getElement();
+      if (el) {
+        el.className = `leaflet-marker-icon pod-marker ${stateClass} leaflet-zoom-animated leaflet-interactive`;
+        const car = el.querySelector('.car');
+        if (car) {
+          car.style.transform = `rotateZ(${(pod.heading || 0) + 90}deg)`; 
+        }
       }
     }
   }
